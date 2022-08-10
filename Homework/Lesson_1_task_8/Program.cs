@@ -10,7 +10,7 @@ if (Number > 2)
 {
     if (Convert.ToInt32(Number) %2 == 0)
         {
-            Even = Convert.ToInt32(Number) - 2;    
+            Even = Convert.ToInt32(Number);    
         }
     else
         {
