@@ -3,23 +3,16 @@
 //82 -> 10
 //9012 -> 12
 // А решать с вводом числа пользователем с консоли было бы проще!
-int A = 452;
-int CountDigits(int x) //Ввожу функцию для вычисления количества знаков в числе
+int A = 9012;
+int CountDigits(int x)
 {
-    int i = x / 10, n = 1, c = 10;
-    while(i > 1)
+    string Amod = x.ToString();
+    int Y = 0;
+    for(int i= 0; i < Amod.Length; i++)
     {
-        i = i / c;
-        c = c * 10;
-        n++;
+        char B = Amod[i];
+        Y = Y + int.Parse(B.ToString());    
     }
-    return n;
+    return Y;
 }
-int[] array = new int[CountDigits(A)];
-void FillArray
-{
-    for(int i = 0; i < CountDigits(A); i++)
-    {
-        
-    }
-}
+Console.WriteLine($"Сумма цифр в числе {A} равна {CountDigits(A)}");
